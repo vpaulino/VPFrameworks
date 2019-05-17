@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>vitor paulino</Authors>
+    <Company>private</Company>
+    <Product>VPFrameworks</Product>
+    <Description>this contains a set of abstractions to enable CQRS software arquitecture</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="UnknownCommandException.cs~RF16a1a3e0.TMP" />
+  </ItemGroup>
+
+</Project>

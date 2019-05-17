@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MessagePack" Version="1.7.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Frameworks\Serialization.Abstractions\Serialization.Abstractions.csproj" />
+    <ProjectReference Include="..\Azure.Messaging.Abstractions\Azure.Messaging.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
