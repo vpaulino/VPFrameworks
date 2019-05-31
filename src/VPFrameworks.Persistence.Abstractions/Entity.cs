@@ -39,5 +39,10 @@ namespace VPFrameworks.Persistence.Abstractions
         /// Gets or sets the entity version on the repository
         /// </summary>
         public long Version { get; set; }
+
+        /// <summary>
+        /// Gets or sets the tags that characterize the entity
+        /// </summary>
+        public IEnumerable<string> Tags { get; set; }
     }
 }

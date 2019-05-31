@@ -26,7 +26,7 @@ namespace VPFrameworks.Persistence.Abstractions
         /// <param name="entity"></param>
         /// <param name="token"></param>
         /// <returns></returns>
-        Task CreateOrUpdate(TId id, TPartialUpdate entity, CancellationToken token);
+        Task InsertOrUpdate(TId id, TPartialUpdate entity, CancellationToken token);
 
         /// <summary>
         /// Delete an entity by is Id

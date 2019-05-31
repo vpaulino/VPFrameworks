@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPFrameworks.Http.Abstracti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPFrameworks.DomainDrivenDesign", "src\VPFrameworks.DomainDrivenDesign\VPFrameworks.DomainDrivenDesign.csproj", "{96A16CB5-5393-4C73-B8BF-53B14A8B6173}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Azure.Persistence.MongoDb", "src\VPFrameworks.Persistence.MongoDb\Azure.Persistence.MongoDb.csproj", "{09D43EA9-D4D7-4065-8795-6F4D37F41A82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{96A16CB5-5393-4C73-B8BF-53B14A8B6173}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96A16CB5-5393-4C73-B8BF-53B14A8B6173}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96A16CB5-5393-4C73-B8BF-53B14A8B6173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09D43EA9-D4D7-4065-8795-6F4D37F41A82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09D43EA9-D4D7-4065-8795-6F4D37F41A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09D43EA9-D4D7-4065-8795-6F4D37F41A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09D43EA9-D4D7-4065-8795-6F4D37F41A82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{80D032C5-25A3-4DF5-87EA-2625797BEC6E} = {E1572CFF-2F31-496F-B1FC-B6157A70045A}
 		{C652AA14-D01A-439B-B93B-F4AE0348C419} = {E1572CFF-2F31-496F-B1FC-B6157A70045A}
 		{96A16CB5-5393-4C73-B8BF-53B14A8B6173} = {E1572CFF-2F31-496F-B1FC-B6157A70045A}
+		{09D43EA9-D4D7-4065-8795-6F4D37F41A82} = {E1572CFF-2F31-496F-B1FC-B6157A70045A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5198935C-A639-408B-BFE1-74B6BB704DDE}

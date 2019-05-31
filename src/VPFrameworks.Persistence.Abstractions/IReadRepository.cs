@@ -31,7 +31,7 @@ namespace VPFrameworks.Persistence.Abstractions
         /// <param name="orderDirection"></param>
         /// <param name="token"></param>
         /// <returns></returns>
-        Task<IEnumerable<TEntity>> GetList(int take, int skip, string orderBy, int orderDirection, CancellationToken token);
+        Task<IEnumerable<TEntity>> GetList<TOrderKey>(int take, int skip, Func<TEntity, TOrderKey> orderBy, int orderDirection, CancellationToken token);
 
         /// <summary>
         /// Gets an <see cref="IEnumerable{T}"/> os Entities
@@ -43,6 +43,29 @@ namespace VPFrameworks.Persistence.Abstractions
         /// <param name="token">cancellation token</param>
         /// <returns></returns>
         Task<IEnumerable<TEntity>> GetByTimeInterval(DateTime CreatedBiggerThen, DateTime CreatedlessThen, int take, int skip, CancellationToken token = default(CancellationToken));
+
+        /// <summary>
+        /// Get entities by interval created date and tags
+        /// </summary>
+        /// <param name="containingTags"></param>
+        /// <param name="CreatedBiggerThen"></param>
+        /// <param name="CreatedlessThen"></param>
+        /// <param name="take"></param>
+        /// <param name="skip"></param>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        Task<IEnumerable<TEntity>> GetByTagsTimeInterval(IEnumerable<string> containingTags, DateTime CreatedBiggerThen, DateTime CreatedlessThen, int take, int skip, CancellationToken token = default);
+
+        /// <summary>
+        ///  Get all entities that have the folowing tags
+        /// </summary>
+        /// <param name="containingTags"></param>
+        /// <param name="take"></param>
+        /// <param name="skip"></param>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        Task<IEnumerable<TEntity>> GetByTags(IEnumerable<string> containingTags, int take, int skip, CancellationToken token);
+
 
     }
 }
