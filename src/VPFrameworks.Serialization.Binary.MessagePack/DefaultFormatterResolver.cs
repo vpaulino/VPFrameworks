@@ -7,6 +7,9 @@ using System.Text;
 
 namespace Azure.Messaging.Serialization.Binary
 {
+    /// <summary>
+    /// Resolves Formatters to serialization
+    /// </summary>
     public class DefaultFormatterResolver : IFormatterResolver
     {
 

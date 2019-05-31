@@ -9,8 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Frameworks\Serialization.Abstractions\Serialization.Abstractions.csproj" />
-    <ProjectReference Include="..\Azure.Messaging.Abstractions\Azure.Messaging.Abstractions.csproj" />
+    <ProjectReference Include="..\VPFrameworks.Serialization.Abstractions\VPFrameworks.Serialization.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>
