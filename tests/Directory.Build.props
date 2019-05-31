@@ -1,8 +1,8 @@
 ﻿<Project>
 
 	<PropertyGroup>
-		<TargetFrameworks>net462;netcoreapp2.1</TargetFrameworks>
-		<RuntimeFrameworkVersion>2.1</RuntimeFrameworkVersion>
+		<TargetFrameworks>net472;netcoreapp2.2</TargetFrameworks>
+		<RuntimeFrameworkVersion>2.2</RuntimeFrameworkVersion>
 		<LangVersion>7.2</LangVersion>
 		<IsPackable>false</IsPackable>
 
@@ -14,8 +14,13 @@
 		<PackageReference Include="Moq" Version="4.8.2" />
 		<PackageReference Include="xunit" Version="2.3.1" />
 		<PackageReference Include="xunit.analyzers" Version="0.8.0" />
-		<PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+
 	</ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
+      		<PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+  </ItemGroup>
+
 	
 
 </Project>
