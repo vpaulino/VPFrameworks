@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Serialization.Abstractions\Serialization.Abstractions.csproj" />
+    <ProjectReference Include="..\VPFrameworks.Serialization.Abstractions\VPFrameworks.Serialization.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,16 +1,26 @@
 ﻿using Newtonsoft.Json;
-using Serialization.Abstractions;
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using VPFrameworks.Serialization.Abstractions;
 
-namespace Serialization.Text.Json
+namespace VPFrameworks.Serialization.Text.Json
 {
+    /// <summary>
+    /// Serializes to Json
+    /// </summary>
     public class JsonSerialiazer : ITextSerializer
     {
 
         Newtonsoft.Json.JsonSerializer serializer = new Newtonsoft.Json.JsonSerializer();
 
+        /// <summary>
+        /// Deserialize from text to an instance of T
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="text"></param>
+        /// <param name="settings"></param>
+        /// <returns></returns>
         public Task<T> Deserialize<T>(string text, SerializationSettings settings)
         {
             TaskCompletionSource<T> tcs = new TaskCompletionSource<T>();
@@ -29,7 +39,13 @@ namespace Serialization.Text.Json
         
             return tcs.Task;
         }
-
+        /// <summary>
+        /// Serializes to string entity T
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entity"></param>
+        /// <param name="settings"></param>
+        /// <returns></returns>
         public Task<string> Serialize<T>(T entity, SerializationSettings settings)
         {
             TaskCompletionSource<string> tcs = new TaskCompletionSource<string>();
