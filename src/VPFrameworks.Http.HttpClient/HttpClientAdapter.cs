@@ -14,7 +14,7 @@ namespace VPFrameworks.Http.Abstractions
     /// <summary>
     /// List the core methods to enable Http comunications
     /// </summary>
-    public abstract class HttpClientHandler  
+    public abstract class HttpClientAdapter
     {
         #region Private Fields
 
@@ -86,7 +86,7 @@ namespace VPFrameworks.Http.Abstractions
         /// <param name="httpClient"></param>
         /// <param name="appId"></param>
         /// <param name="mediaTypeFormatter"></param>
-        protected HttpClientHandler(HttpClient httpClient, string appId, MediaTypeFormatter mediaTypeFormatter)
+        protected HttpClientAdapter(HttpClient httpClient, string appId, MediaTypeFormatter mediaTypeFormatter)
         {
             this.HttpClient = httpClient;
             this.AppId = appId;
@@ -140,26 +140,18 @@ namespace VPFrameworks.Http.Abstractions
             return responseContent;
         }
 
-        /// <summary>
-        /// Executes patch http verb
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="route"></param>
-        /// <param name="payload"></param>
-        /// <param name="responseHandler"></param>
-        /// <param name="parameters"></param>
-        /// <returns></returns>
-        public async Task<T> PatchAsync<T>(string route, T payload, Func<HttpResponseMessage, Task<T>> responseHandler, params string[] parameters)
-        {
+         
+        //public async Task<T> PatchAsync<T>(string route, T payload, Func<HttpResponseMessage, Task<T>> responseHandler, params string[] parameters)
+        //{
 
-            var actionUri = string.Format(route, parameters);
-            var content = new ObjectContent(payload.GetType(), payload, this.mediaTypeFormatter);
-            HttpResponseMessage response = await this.HttpClient.PatchAsync(actionUri, content).ConfigureAwait(false);
+        //    var actionUri = string.Format(route, parameters);
+        //    var content = new ObjectContent(payload.GetType(), payload, this.mediaTypeFormatter);
+        //    HttpResponseMessage response = await this.HttpClient.PatchAsync(actionUri, content).ConfigureAwait(false);
 
-            T responseContent = await responseHandler?.Invoke(response);
+        //    T responseContent = await responseHandler?.Invoke(response);
 
-            return responseContent;
-        }
+        //    return responseContent;
+        //}
 
         /// <summary>
         /// Generates a query string parameters. 
