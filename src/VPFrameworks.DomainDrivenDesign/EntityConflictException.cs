@@ -6,16 +6,27 @@ using System.Threading.Tasks;
 
 namespace AA.Framework
 {
-    //[Serializable]
+   /// <summary>
+   /// If two entities have conflitcs
+   /// </summary>
     public class EntityConflictException : EntityException
     {
          
-       
+       /// <summary>
+       /// Creates instance
+       /// </summary>
+       /// <param name="entity"></param>
 
         public EntityConflictException(object entity) : base(entity)
         {
         
         }
+
+        /// <summary>
+        /// Creates instance
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="message"></param>
 
         public EntityConflictException(object entity, string message)
             : base(entity, message)
@@ -23,6 +34,12 @@ namespace AA.Framework
 
         }
 
+        /// <summary>
+        /// Creates instance
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="message"></param>
+        /// <param name="inner"></param>
         public EntityConflictException(object entity, string message, Exception inner) : base(entity, message, inner)
         {
         
