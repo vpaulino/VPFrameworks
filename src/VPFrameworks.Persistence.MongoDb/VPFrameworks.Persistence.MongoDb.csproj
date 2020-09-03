@@ -10,6 +10,7 @@
     <Description>
       This client library provides the base functionality project to support comunication to a database that provides MongoDB API, such as CosmosDB.
     </Description>
+    <ProjectUrl>https://github.com/vpaulino/VPFrameworks/wiki</ProjectUrl>
   </PropertyGroup>
   
   <PropertyGroup>
